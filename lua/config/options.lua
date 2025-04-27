@@ -7,7 +7,7 @@ vim.g.autoformat = true
 
 -- Snacks animations
 -- Set to `false` to globally disable all snacks animations
-vim.g.snacks_animate = true
+vim.g.snacks_animate = false
 
 -- LazyVim picker to use.
 -- Can be one of: telescope, fzf
@@ -36,7 +36,7 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 -- This sets `vim.o.shell` and does some additional configuration for:
 -- * pwsh
 -- * powershell
--- LazyVim.terminal.setup("pwsh")
+LazyVim.terminal.setup("pwsh")
 
 -- Set LSP servers to be ignored when used with `util.root.detectors.lsp`
 -- for detecting the LSP root
@@ -85,7 +85,7 @@ opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
 opt.relativenumber = true -- Relative line numbers
 opt.ruler = false -- Disable the default ruler
-opt.scrolloff = 4 -- Lines of context
+opt.scrolloff = 999 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 2 -- Size of an indent
@@ -109,7 +109,7 @@ opt.updatetime = 200 -- Save swap file and trigger CursorHold
 opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
-opt.wrap = false -- Disable line wrap
+opt.wrap = true -- Enable line wrap
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true

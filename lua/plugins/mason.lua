@@ -9,6 +9,8 @@ return {
       "stylua",
       "shfmt",
       "ruff",
+      "prettier",
+      "prettierd",
     },
   },
   ---@param opts MasonSettings | {ensure_installed: string[]}

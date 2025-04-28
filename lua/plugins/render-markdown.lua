@@ -1,17 +1,18 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
+  dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" },
   opts = {
+    render_modes = { "n", "c", "t" },
     code = {
-      sign = false,
+      sign = true,
       width = "block",
       right_pad = 1,
     },
     heading = {
-      sign = false,
-      icons = {},
+      sign = true,
     },
     checkbox = {
-      enabled = false,
+      enabled = true,
     },
   },
   ft = { "markdown", "norg", "rmd", "org", "codecompanion" },

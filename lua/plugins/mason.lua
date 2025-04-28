@@ -11,6 +11,8 @@ return {
       "ruff",
       "prettier",
       "prettierd",
+      "markdownlint-cli2",
+      "markdown-toc",
     },
   },
   ---@param opts MasonSettings | {ensure_installed: string[]}

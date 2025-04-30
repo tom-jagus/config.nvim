@@ -13,6 +13,7 @@ return {
       "prettierd",
       "markdownlint-cli2",
       "markdown-toc",
+      "marksman",
     },
   },
   ---@param opts MasonSettings | {ensure_installed: string[]}

@@ -14,13 +14,30 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Evaluate SECOND_BRAIN environment variable
+vim.g.secondbrain_mode = os.getenv("SECOND_BRAIN") == "1"
+vim.g.dailytasks_mode = os.getenv("DAILY_TASKS") == "1"
+
+-- Build plugin spec list dynamically
+local spec = {
+  -- add LazyVim and import its plugins
+  { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+  -- import/override with your plugins
+  { import = "plugins" },
+}
+
+-- Overwrite config for SecondBrain
+if vim.g.secondbrain_mode then
+  table.insert(spec, { import = "plugins.secondbrain" })
+end
+
+-- Overwrite config for DailyTasks
+if vim.g.dailytasks_mode then
+  table.insert(spec, { import = "plugins.dailytasks" })
+end
+
 require("lazy").setup({
-  spec = {
-    -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import/override with your plugins
-    { import = "plugins" },
-  },
+  spec = spec,
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.

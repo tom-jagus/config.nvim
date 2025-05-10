@@ -9,9 +9,27 @@ return {
       right_pad = 1,
     },
     heading = {
-      sign = true,
+      sign = false,
+      border = false,
+      render_modes = false,
     },
     checkbox = {
+      enabled = true,
+      render_modes = false,
+      right_pad = 1,
+      unchecked = {
+        icon = "󰄱 ",
+        highlight = "RenderMarkdownUnchecked",
+        scope_highlight = nil,
+      },
+      checked = {
+        icon = "󰱒 ",
+        highlight = "RenderMarkdownChecked",
+        scope_highlight = "@markup.strikethrough",
+      },
+    },
+    indent = { enabled = false },
+    lsp = {
       enabled = true,
     },
   },

@@ -56,36 +56,36 @@ return {
         which_key = true,
       },
       highlight_overrides = {
-        mocha = function(mocha)
+        all = function(color)
           return {
-            rainbow1 = { fg = mocha.red },
-            Headline1 = { fg = mocha.red },
-            RenderMarkdownH1 = { fg = mocha.red },
+            rainbow1 = { fg = color.red },
+            Headline1 = { fg = color.red },
+            RenderMarkdownH1 = { fg = color.red },
             RenderMarkdownH1Bg = { bg = "#47292d" }, --red
-            rainbow2 = { fg = mocha.green },
-            Headline2 = { fg = mocha.green },
-            RenderMarkdownH2 = { fg = mocha.green },
+            rainbow2 = { fg = color.green },
+            Headline2 = { fg = color.green },
+            RenderMarkdownH2 = { fg = color.green },
             RenderMarkdownH2Bg = { bg = "#32412d" }, --green
-            rainbow3 = { fg = mocha.blue },
-            Headline3 = { fg = mocha.blue },
-            RenderMarkdownH3 = { fg = mocha.blue },
+            rainbow3 = { fg = color.blue },
+            Headline3 = { fg = color.blue },
+            RenderMarkdownH3 = { fg = color.blue },
             RenderMarkdownH3Bg = { bg = "#36394c" }, --blue
-            rainbow4 = { fg = mocha.teal },
-            Headline4 = { fg = mocha.teal },
-            RenderMarkdownH4 = { fg = mocha.teal },
+            rainbow4 = { fg = color.teal },
+            Headline4 = { fg = color.teal },
+            RenderMarkdownH4 = { fg = color.teal },
             RenderMarkdownH4Bg = { bg = "#233c47" }, --teal
-            rainbow5 = { fg = mocha.yellow },
-            Headline5 = { fg = mocha.yellow },
-            RenderMarkdownH5 = { fg = mocha.yellow },
+            rainbow5 = { fg = color.yellow },
+            Headline5 = { fg = color.yellow },
+            RenderMarkdownH5 = { fg = color.yellow },
             RenderMarkdownH5Bg = { bg = "#474030" }, --yellow
-            rainbow6 = { fg = mocha.peach },
-            Headline6 = { fg = mocha.peach },
-            RenderMarkdownH6 = { fg = mocha.peach },
+            rainbow6 = { fg = color.peach },
+            Headline6 = { fg = color.peach },
+            RenderMarkdownH6 = { fg = color.peach },
             RenderMarkdownH6Bg = { bg = "#4a3326" }, --peach
-            RenderMarkdownLink = { fg = mocha.sapphire },
-            RenderMarkdownLinkText = { fg = mocha.sapphire },
-            RenderMarkdownBullet = { fg = mocha.maroon },
-            RenderMarkdownHint = { fg = mocha.teal },
+            RenderMarkdownLink = { fg = color.sapphire },
+            RenderMarkdownLinkText = { fg = color.sapphire },
+            RenderMarkdownBullet = { fg = color.maroon },
+            RenderMarkdownHint = { fg = color.teal },
           }
         end,
       },

@@ -1,3 +1,7 @@
+-- Evaluate SECOND_BRAIN environment variable
+vim.g.secondbrain_mode = os.getenv("SECOND_BRAIN") == "1"
+vim.g.dailytasks_mode = os.getenv("DAILY_TASKS") == "1"
+
 -- This file is automatically loaded by plugins.core
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -80,12 +84,19 @@ opt.laststatus = 3 -- global statusline
 opt.linebreak = true -- Wrap lines at convenient points
 opt.list = true -- Show some invisible characters (tabs...
 opt.mouse = "a" -- Enable mouse mode
-opt.number = true -- Print line number
+
+if vim.g.dailytasks_mode then
+  opt.number = false -- Don't print line numbers for DailyTasks
+  opt.relativenumber = false -- Relative line numbers
+else
+  opt.number = true -- Print line number
+  opt.relativenumber = true -- Relative line numbers
+end
+
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
-opt.relativenumber = true -- Relative line numbers
 opt.ruler = false -- Disable the default ruler
-opt.scrolloff = 999 -- Lines of context
+opt.scrolloff = 12 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 2 -- Size of an indent
